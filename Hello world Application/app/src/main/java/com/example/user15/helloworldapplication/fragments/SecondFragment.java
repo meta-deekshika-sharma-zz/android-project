@@ -1,12 +1,16 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.fragments;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.example.user15.helloworldapplication.R;
 
 
 /**
@@ -27,6 +31,8 @@ public class SecondFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private TextView sumTextView;
+    private int sum = 0;
     private OnFragmentInteractionListener mListener;
 
     public SecondFragment() {
@@ -64,7 +70,23 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
+        sumTextView = view.findViewById(R.id.sumTextView);
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Bundle bundle = getArguments();
+
+        if (bundle != null) {
+            int firstNumber = bundle.getInt("firstNumber");
+            int secondNumber = bundle.getInt("secondNumber");
+            sum = firstNumber + secondNumber;
+            Log.d("12345", "" + sum);
+            sumTextView.setText("" + sum);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -77,12 +99,6 @@ public class SecondFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
     }
 
     @Override

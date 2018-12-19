@@ -15,13 +15,12 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_margin="20px">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="number"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
                 android:hint="Enter first number"
                 android:id="@+id/firstNumber"/>
         </android.support.design.widget.TextInputLayout>
@@ -30,8 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginLeft="10px"
-            android:layout_marginRight="10px">
+            android:layout_margin="20px">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

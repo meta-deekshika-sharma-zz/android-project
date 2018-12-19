@@ -8,7 +8,7 @@
     app:layout_constraintHorizontal_chainStyle="spread">
 
     <fragment android:name="com.example.user15.helloworldapplication.fragments.ExampleFragment"
-        android:id="@+id/exampleFragmentFragment"
+        android:id="@+id/exampleFragment"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 
@@ -31,13 +31,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="40px"
             android:layout_marginLeft="10px"
             android:layout_marginRight="10px">
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5px"
+                android:layout_margin="10px"
                 android:text="Standard Launch"
                 android:textColor="#fff"
                 android:background="@drawable/button_gradient"
@@ -46,50 +47,50 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5px"
+                android:layout_margin="10px"
                 android:text="Single Top"
                 android:textColor="#fff"
                 android:background="@drawable/button_gradient"
                 android:id="@+id/btnSingleTopActivity"/>
         </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10px"
+            android:text="Single Task"
+            android:textColor="#fff"
+            android:background="@drawable/button_gradient"
+            android:id="@+id/btnSingleTaskActivity"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10px"
+            android:text="Single Instance"
+            android:textColor="#fff"
+            android:background="@drawable/button_gradient"
+            android:id="@+id/btnSingleInstanceActivity"/>
+    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="40px"
             android:layout_marginLeft="10px"
             android:layout_marginRight="10px">
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5px"
-                android:text="Single Task"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnSingleTaskActivity"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5px"
-                android:text="Single Instance"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnSingleInstanceActivity"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10px"
-            android:layout_marginRight="10px">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="5px"
+                android:layout_margin="10px"
                 android:text="Intents"
                 android:textColor="#fff"
                 android:background="@drawable/button_gradient"
@@ -98,7 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5px"
+                android:layout_margin="10px"
                 android:text="Fragments"
                 android:textColor="#fff"
                 android:background="@drawable/button_gradient"

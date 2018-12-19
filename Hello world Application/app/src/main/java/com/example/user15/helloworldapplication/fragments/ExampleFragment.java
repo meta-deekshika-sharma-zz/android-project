@@ -1,23 +1,26 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.fragments;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.user15.helloworldapplication.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FirstFragment.OnFragmentInteractionListener} interface
+ * {@link ExampleFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FirstFragment#newInstance} factory method to
+ * Use the {@link ExampleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FirstFragment extends Fragment {
+public class ExampleFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +32,7 @@ public class FirstFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public FirstFragment() {
+    public ExampleFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +42,11 @@ public class FirstFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FirstFragment.
+     * @return A new instance of fragment ExampleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FirstFragment newInstance(String param1, String param2) {
-        FirstFragment fragment = new FirstFragment();
+    public static ExampleFragment newInstance(String param1, String param2) {
+        ExampleFragment fragment = new ExampleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,13 +61,18 @@ public class FirstFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+        Log.d("1234", "onCreate Fragment");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first, container, false);
+
+        Log.d("1234", "onCreateView");
+        return inflater.inflate(R.layout.fragment_example, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -77,17 +85,14 @@ public class FirstFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
+        Log.d("1234", "onAttach");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+        Log.d("1234", "onDetach");
         mListener = null;
     }
 
@@ -104,5 +109,35 @@ public class FirstFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("1234", "onStart Fragment");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("1234", "onPause Fragment");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("1234", "onResume Fragment");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("1234", "onStop Fragment");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("1234", "onDestroy Fragment");
     }
 }

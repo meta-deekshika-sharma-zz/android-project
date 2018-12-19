@@ -1,4 +1,4 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,18 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class SingleInstanceActivity extends AppCompatActivity {
+import com.example.user15.helloworldapplication.R;
+
+public class StandardLaunchActivity extends AppCompatActivity {
 
     private Button btnStandardLaunchActivity, btnSingleTopActivity, btnSingleTaskActivity, btnSingleInstanceActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_single_instance);
+        setContentView(R.layout.activity_standard_launch);
 
-        Log.d("launch_mode", "Single Instance Activity");
+        Log.d("launch_mode", "Standard Launch Activity");
 
         btnStandardLaunchActivity = findViewById(R.id.btnStandardLaunchActivity);
         btnSingleTopActivity = findViewById(R.id.btnSingleTopActivity);
@@ -27,28 +28,28 @@ public class SingleInstanceActivity extends AppCompatActivity {
         btnStandardLaunchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SingleInstanceActivity.this, StandardLaunchActivity.class));
+                startActivity(new Intent(StandardLaunchActivity.this, StandardLaunchActivity.class));
             }
         });
 
         btnSingleTopActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SingleInstanceActivity.this, SingleTopActivity.class));
+                startActivity(new Intent(StandardLaunchActivity.this, SingleTopActivity.class));
             }
         });
 
         btnSingleTaskActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SingleInstanceActivity.this, SingleTaskActivity.class));
+                startActivity(new Intent(StandardLaunchActivity.this, SingleTaskActivity.class));
             }
         });
 
         btnSingleInstanceActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SingleInstanceActivity.this, SingleInstanceActivity.class));
+                startActivity(new Intent(StandardLaunchActivity.this, SingleInstanceActivity.class));
             }
         });
     }

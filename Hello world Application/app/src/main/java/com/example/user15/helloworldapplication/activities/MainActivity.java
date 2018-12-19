@@ -1,4 +1,4 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.example.user15.helloworldapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnStandardLaunchActivity, btnSingleTopActivity, btnSingleTaskActivity, btnSingleInstanceActivity, btnIntentActivity;
-    private int firstNumber, secondNumber;
+    private Button btnStandardLaunchActivity, btnSingleTopActivity, btnSingleTaskActivity, btnSingleInstanceActivity, btnIntentActivity, btnFragmentActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btnSingleTaskActivity = findViewById(R.id.btnSingleTaskActivity);
         btnSingleInstanceActivity = findViewById(R.id.btnSingleInstanceActivity);
         btnIntentActivity = findViewById(R.id.btnIntentActivity);
+        btnFragmentActivity = findViewById(R.id.btnFragmentActivity);
 
         btnStandardLaunchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        btnFragmentActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FragmentActivity.class));
+            }
+        });
+
     }
 
     @Override
@@ -74,14 +83,6 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         Log.d("1234", "onResume");
-        Bundle bundle = this.getIntent().getExtras();
-        if(bundle != null) {
-            firstNumber = (int) bundle.get("firstNumber");
-            secondNumber = (int) bundle.get("secondNumber");
-        }
-
-        int sum = firstNumber + secondNumber;
-        Toast.makeText(this, "Sum : " + sum, Toast.LENGTH_SHORT).show();
     }
 
     @Override

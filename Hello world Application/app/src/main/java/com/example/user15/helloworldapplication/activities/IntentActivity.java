@@ -1,4 +1,4 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.user15.helloworldapplication.R;
 
 public class IntentActivity extends AppCompatActivity {
 

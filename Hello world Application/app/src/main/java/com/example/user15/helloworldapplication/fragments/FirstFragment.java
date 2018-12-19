@@ -1,4 +1,4 @@
-package com.example.user15.helloworldapplication;
+package com.example.user15.helloworldapplication.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,16 +13,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user15.helloworldapplication.R;
+import com.example.user15.helloworldapplication.activities.FragmentActivity;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ExampleFragment.OnFragmentInteractionListener} interface
+ * {@link FirstFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ExampleFragment#newInstance} factory method to
+ * Use the {@link FirstFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExampleFragment extends Fragment {
+public class FirstFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,7 +40,7 @@ public class ExampleFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ExampleFragment() {
+    public FirstFragment() {
         // Required empty public constructor
     }
 
@@ -47,11 +50,11 @@ public class ExampleFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ExampleFragment.
+     * @return A new instance of fragment FirstFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ExampleFragment newInstance(String param1, String param2) {
-        ExampleFragment fragment = new ExampleFragment();
+    public static FirstFragment newInstance(String param1, String param2) {
+        FirstFragment fragment = new FirstFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,9 +69,6 @@ public class ExampleFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
-        Log.d("1234", "onCreate Fragment");
     }
 
     @Override
@@ -76,8 +76,7 @@ public class ExampleFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_example, container, false);
-        Log.d("1234", "onCreateView");
+        final View view = inflater.inflate(R.layout.fragment_first, container, false);
 
         firstNumber = view.findViewById(R.id.firstNumber);
         secondNumber = view.findViewById(R.id.secondNumber);
@@ -86,13 +85,18 @@ public class ExampleFragment extends Fragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getBaseContext(), MainActivity.class);
+                Intent intent = new Intent(getActivity().getBaseContext(), FragmentActivity.class);
 
-                intent.putExtra("firstNumber",Integer.parseInt(firstNumber.getText().toString()));
-                intent.putExtra("secondNumber",Integer.parseInt(secondNumber.getText().toString()));
-                getActivity().startActivity(intent);
+                if (firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter both numbers", Toast.LENGTH_SHORT).show();
+                } else {
+                    intent.putExtra("firstNumber", Integer.parseInt(firstNumber.getText().toString()));
+                    intent.putExtra("secondNumber", Integer.parseInt(secondNumber.getText().toString()));
+                    getActivity().startActivity(intent);
+                }
             }
         });
+
         return view;
     }
 
@@ -106,14 +110,11 @@ public class ExampleFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
-        Log.d("1234", "onAttach");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        Log.d("1234", "onDetach");
         mListener = null;
     }
 
@@ -130,35 +131,5 @@ public class ExampleFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Log.d("1234", "onStart Fragment");
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.d("1234", "onPause Fragment");
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d("1234", "onResume Fragment");
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        Log.d("1234", "onStop Fragment");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.d("1234", "onDestroy Fragment");
     }
 }
