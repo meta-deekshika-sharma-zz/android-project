@@ -19,6 +19,7 @@ public class FragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
+        getSupportActionBar().setTitle("Fragment Communication");
 
         sumTextView = findViewById(R.id.sumTextView);
     }

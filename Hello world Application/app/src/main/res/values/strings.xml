@@ -1,6 +1,34 @@
 <resources>
     <string name="app_name">Hello World Application</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="check_aadhar_card">Aadhar Card</string>
+    <string name="check_pan_card">Pan Card</string>
+    <string name="check_voter_card">Voter ID Card</string>
+    <string name="check_driving_licence">Driving Licence</string>
+    <string-array name="state">
+        <item>Gujrat</item>
+        <item>Rajasthan</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+    <string-array name="gujrat_city">
+        <item>Ahendabad</item>
+        <item>Badodra</item>
+        <item>Jamnager</item>
+        <item>Surat</item>
+    </string-array>
+    <string-array name="rajasthan_city">
+        <item>Ajmer</item>
+        <item>Alwar</item>
+        <item>Jaipur</item>
+        <item>Kota</item>
+    </string-array>
+    <string-array name="up_city">
+        <item>Agra</item>
+        <item>Kanpur</item>
+        <item>Lakhnow</item>
+        <item>Varanasi</item>
+    </string-array>
 </resources>

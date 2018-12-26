@@ -24,6 +24,7 @@ public class IntentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent);
+        getSupportActionBar().setTitle("Intent");
 
         btnCamera = findViewById(R.id.btnCamera);
         btnMap = findViewById(R.id.btnMap);

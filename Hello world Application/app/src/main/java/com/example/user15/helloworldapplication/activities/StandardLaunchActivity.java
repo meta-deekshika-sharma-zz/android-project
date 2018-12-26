@@ -17,6 +17,7 @@ public class StandardLaunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_standard_launch);
+        getSupportActionBar().setTitle("Standard Launch");
 
         Log.d("launch_mode", "Standard Launch Activity");
 

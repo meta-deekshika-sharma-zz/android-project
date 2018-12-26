@@ -97,6 +97,60 @@
                 android:background="@drawable/button_gradient"
                 android:id="@+id/btnFragmentActivity"/>
         </LinearLayout>
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5px"
+                android:text="Submit Form"
+                android:textColor="#fff"
+                android:background="@drawable/button_gradient"
+                android:id="@+id/btnFormActivity"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5px"
+                android:text="Recycler View"
+                android:textColor="#fff"
+                android:background="@drawable/button_gradient"
+                android:id="@+id/btnRecyclerViewActivity"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5px"
+                android:text="Get Weather Info"
+                android:textColor="#fff"
+                android:background="@drawable/button_gradient"
+                android:id="@+id/btnWeatherActivity"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="40px"
+            android:layout_marginRight="10px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnWeatherVolleyActivity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5px"
+                android:layout_weight="1"
+                android:background="@drawable/button_gradient"
+                android:text="Get Weather Info Through Volley"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

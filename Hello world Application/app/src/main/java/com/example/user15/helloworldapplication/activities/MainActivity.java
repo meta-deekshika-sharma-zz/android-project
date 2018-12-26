@@ -3,6 +3,7 @@ package com.example.user15.helloworldapplication.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import com.example.user15.helloworldapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnStandardLaunchActivity, btnSingleTopActivity, btnSingleTaskActivity, btnSingleInstanceActivity, btnIntentActivity, btnFragmentActivity;
+    private Button btnStandardLaunchActivity, btnSingleTopActivity, btnSingleTaskActivity, btnSingleInstanceActivity, btnIntentActivity, btnFragmentActivity, btnFormActivity, btnRecyclerViewActivity, btnWeatherActivity, btnWeatherVolleyActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         btnSingleInstanceActivity = findViewById(R.id.btnSingleInstanceActivity);
         btnIntentActivity = findViewById(R.id.btnIntentActivity);
         btnFragmentActivity = findViewById(R.id.btnFragmentActivity);
+        btnFormActivity = findViewById(R.id.btnFormActivity);
+        btnRecyclerViewActivity = findViewById(R.id.btnRecyclerViewActivity);
+        btnWeatherActivity = findViewById(R.id.btnWeatherActivity);
+        btnWeatherVolleyActivity = findViewById(R.id.btnWeatherVolleyActivity);
 
         btnStandardLaunchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +72,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, FragmentActivity.class));
+            }
+        });
+
+        btnFormActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FormActivity.class));
+            }
+        });
+
+        btnRecyclerViewActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+            }
+        });
+
+        btnWeatherActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeatherActivity.class);
+                intent.putExtra("findType", "HttpUrl");
+                startActivity(intent);
+            }
+        });
+
+        btnWeatherVolleyActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeatherActivity.class);
+                intent.putExtra("findType", "Volley");
+                startActivity(intent);
             }
         });
 

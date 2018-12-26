@@ -4,12 +4,15 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <supports-screens android:smallScreens="true"
-        android:normalScreens="true"
+    <supports-screens
+        android:anyDensity="true"
         android:largeScreens="true"
-        android:xlargeScreens="true"
-        android:anyDensity="true" />
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -27,18 +30,30 @@
         </activity>
         <activity
             android:name=".activities.StandardLaunchActivity"
-            android:launchMode="standard" />
+            android:launchMode="standard"
+            android:parentActivityName=".activities.MainActivity"/>
         <activity
             android:name=".activities.SingleTopActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.MainActivity"/>
         <activity
             android:name=".activities.SingleTaskActivity"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"/>
         <activity
             android:name=".activities.SingleInstanceActivity"
-            android:launchMode="singleInstance" />
-        <activity android:name=".activities.IntentActivity" />
-        <activity android:name=".activities.FragmentActivity"/>
+            android:launchMode="singleInstance"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.IntentActivity"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.FragmentActivity"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.FormActivity"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.RecyclerViewActivity"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.WeatherActivity"
+            android:parentActivityName=".activities.MainActivity"></activity>
     </application>
 
 </manifest>

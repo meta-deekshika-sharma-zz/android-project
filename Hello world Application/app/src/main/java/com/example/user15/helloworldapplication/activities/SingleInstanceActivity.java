@@ -17,6 +17,7 @@ public class SingleInstanceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_instance);
+        getSupportActionBar().setTitle("Single Instance");
 
         Log.d("launch_mode", "Single Instance Activity");
 
