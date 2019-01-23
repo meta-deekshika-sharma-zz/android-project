@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Intermediate Application</string>
+    <string name="camera_permission">Please allow to open camera</string>
+    <string name="read_contact_permission">Please allow to access contact</string>
+    <string name="send_sms_permission">Please allow to send SMS</string>
+    <string name="record_audio_permission">Please allow to access recording</string>
+    <string name="notification_title">Meeting at 4:30 PM</string>
+    <string name="notification_text">Hi Guys</string>
+    <string name="notification_detail">We have a meeting at 4:30 PM with our clients. Please all have to be here and should be prepared about project.</string>
+    <string name="channel_id">Work</string>
+</resources>

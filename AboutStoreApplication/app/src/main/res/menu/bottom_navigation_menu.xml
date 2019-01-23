@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/stores"
+        android:icon="@drawable/stores_active_copy_5"
+        android:title="@string/stores" />
+    <item android:id="@+id/menu"
+        android:icon="@drawable/order_active_copy_4"
+        android:title="@string/menu"/>
+    <item android:id="@+id/rewards"
+        android:icon="@drawable/fill_6"
+        android:title="@string/rewards"/>
+    <item android:id="@+id/inbox"
+        android:icon="@drawable/inbox_copy_4"
+        android:title="@string/stores"/>
+    <item android:id="@+id/more"
+        android:icon="@drawable/more_copy_4"
+        android:title="@string/more"/>
+</menu>

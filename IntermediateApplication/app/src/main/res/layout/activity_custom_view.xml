@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".activities.CustomViewActivity">
+
+    <com.example.user15.intermediateapplication.views.CustomEditTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customEditText"
+        app:edit_text="Enter Text"/>
+
+    <com.example.user15.intermediateapplication.views.CustomButtonView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:border_radius="10"
+        app:color="#a411ed"/>
+</LinearLayout>
