@@ -3,18 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SecondFragment"
-    android:background="#bdd9fc">
+    android:padding="16dp"
+    tools:context=".fragments.SecondFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sum : "
-        android:textSize="20sp"/>
+        android:text="@string/sum"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:id="@+id/sumTextView"/>
+        android:id="@+id/sumTextView"
+        android:textColor="@android:color/black"/>
 </LinearLayout>

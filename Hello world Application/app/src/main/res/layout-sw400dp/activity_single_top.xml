@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.SingleTopActivity">
 
     <TextView
+        android:id="@+id/textView"
+        style="@style/activity_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Single Top Activity"
-        android:paddingTop="20px"
-        android:id="@+id/textView"/>
+        android:padding="20dp"
+        android:text="@string/single_top" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="100px"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:padding="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="20px"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnStandardLaunchActivity"
+                style="@style/button_style"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Standard Launch" />
+                android:background="@drawable/button_bg"
+                android:text="@string/standard_launch" />
 
             <Button
                 android:id="@+id/btnSingleTopActivity"
+                style="@style/button_style"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Top" />
+                android:background="@drawable/button_bg"
+                android:text="@string/single_top" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="20px"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnSingleTaskActivity"
+                style="@style/button_style"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Task" />
+                android:background="@drawable/button_bg"
+                android:text="@string/single_task" />
 
             <Button
                 android:id="@+id/btnSingleInstanceActivity"
+                style="@style/button_style"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Instance" />
+                android:background="@drawable/button_bg"
+                android:text="@string/single_instance" />
         </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

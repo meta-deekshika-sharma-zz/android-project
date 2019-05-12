@@ -1,203 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
     tools:context=".fragments.ShowFormDataFragment"
-    android:background="#6efdfd">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nameTextView"
-        android:layout_margin="20dp"
-        android:paddingTop="100dp">
+        android:paddingTop="30dp"
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Name : "
+            android:text="@string/name"
+            style="@style/activity_name"
             android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/name"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/emailTextView"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Email : "
+            android:text="@string/email"
+            style="@style/activity_name"
             android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/email"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/numberTextView"
-        app:layout_constraintTop_toBottomOf="@id/emailTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Number : "
-            android:textSize="30sp" />
+            android:text="@string/contact_no"
+            style="@style/activity_name"
+            android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/number"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dobTextView"
-        app:layout_constraintTop_toBottomOf="@id/numberTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="DOB : "
-            android:textSize="30sp" />
+            android:text="@string/dob"
+            style="@style/activity_name"
+            android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/dob"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/genderTextView"
-        app:layout_constraintTop_toBottomOf="@id/dobTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Gender : "
+            android:text="@string/gender"
+            style="@style/activity_name"
             android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/gender"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/idTextView"
-        app:layout_constraintTop_toBottomOf="@id/genderTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="ID : "
+            android:text="@string/id"
+            style="@style/activity_name"
             android:textSize="30sp"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:orientation="vertical">
-            <LinearLayout
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/check_aadhar_card"
-                    android:id="@+id/aadharCard"
-                    android:textSize="25sp"/>
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:text="@string/check_pan_card"
-                    android:id="@+id/panCard"
-                    android:textSize="25sp"/>
-            </LinearLayout>
-            <LinearLayout
+                android:text="@string/check_aadhar_card"
+                android:id="@+id/aadharCard"
+                android:textSize="20sp"/>
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/check_voter_card"
-                    android:id="@+id/voterCard"
-                    android:textSize="25sp"/>
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:text="@string/check_driving_licence"
-                    android:id="@+id/drivingLicence"
-                    android:textSize="25sp"/>
-            </LinearLayout>
+                android:text="@string/check_pan_card"
+                android:id="@+id/panCard"
+                android:textSize="20sp"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/check_voter_card"
+                android:id="@+id/voterCard"
+                android:textSize="20sp"/>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/check_driving_licence"
+                android:id="@+id/drivingLicence"
+                android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/stateTextView"
-        app:layout_constraintTop_toBottomOf="@id/idTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="State : "
-            android:textSize="30sp"/>
+            android:text="@string/state"
+            android:textSize="30sp"
+            style="@style/activity_name"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/state"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cityTextView"
-        app:layout_constraintTop_toBottomOf="@id/stateTextView"
-        android:layout_margin="20dp">
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="City : "
+            android:text="@string/city"
+            style="@style/activity_name"
             android:textSize="30sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:id="@+id/city"
+            style="@style/activity_name"
             android:textSize="30sp"/>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -2,6 +2,7 @@
     <string name="app_name">Hello World Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activity_text">Activity</string>
     <string name="radio_male">Male</string>
     <string name="radio_female">Female</string>
     <string name="check_aadhar_card">Aadhar Card</string>
@@ -31,4 +32,41 @@
         <item>Lakhnow</item>
         <item>Varanasi</item>
     </string-array>
+
+    <string name="standard_launch">Standard Launch</string>
+    <string name="single_task">Single Task</string>
+    <string name="single_top">Single Top</string>
+    <string name="single_instance">Single Instance</string>
+
+    <string name="phone">Phone</string>
+    <string name="camera">Camera</string>
+    <string name="msg">Message</string>
+    <string name="map">Map</string>
+
+    <string name="enter_name">Enter name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_number">Enter contact number</string>
+    <string name="select_dob">Select date of birth</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="contact_no">Contact number</string>
+    <string name="dob">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="id">ID</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+
+    <string name="enter_first_no">Enter first number</string>
+    <string name="enter_second_no">Enter second number</string>
+    <string name="add">Add</string>
+    <string name="sum">Sum :</string>
+
+    <string name="temperature">Temperature</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="min_temp">Min. Temperature</string>
+    <string name="max_temp">Max. Temperature</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="degree_cel">&#176;C</string>
 </resources>

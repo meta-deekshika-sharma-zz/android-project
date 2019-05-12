@@ -42,7 +42,7 @@ public class FormActivity extends AppCompatActivity {
             ShowFormDataFragment showFormDataFragment = new ShowFormDataFragment();
             showFormDataFragment.setArguments(bundle);
 
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();;
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.formFragment, showFormDataFragment);
             fragmentTransaction.commit();
         }

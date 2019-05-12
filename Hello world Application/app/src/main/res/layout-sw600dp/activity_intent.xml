@@ -4,62 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.IntentActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.IntentActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100px">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5px"
-            android:text="Camera"
             android:id="@+id/btnCamera"
-            android:background="@drawable/button_gradient"/>
-        <Button
+            style="@style/button_style"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:layout_margin="5px"
-            android:text="Map"
+            android:background="@drawable/button_gradient"
+            android:text="@string/camera" />
+
+        <Button
             android:id="@+id/btnMap"
-            android:background="@drawable/button_gradient"/>
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_gradient"
+            android:text="@string/map" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100px">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="5px"
-            android:text="Phone"
             android:id="@+id/btnPhone"
-            android:background="@drawable/button_gradient"/>
-        <Button
+            style="@style/button_style"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:layout_margin="5px"
-            android:text="Message"
+            android:background="@drawable/button_gradient"
+            android:text="@string/phone" />
+
+        <Button
             android:id="@+id/btnMessage"
-            android:background="@drawable/button_gradient"/>
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_gradient"
+            android:text="@string/msg" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100px">
-        <ImageView
+        android:layout_marginTop="50dp">
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/imageView"/>
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 </LinearLayout>

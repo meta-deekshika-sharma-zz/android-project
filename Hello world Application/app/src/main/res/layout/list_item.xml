@@ -1,30 +1,35 @@
-<LinearLayout android:layout_height="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_margin="5dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
+                android:id="@+id/imageViewFlag"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:id="@+id/imageViewFlag"
-                android:src="@drawable/flag_of_india"
-                android:layout_margin="5dp"/>
+                android:layout_margin="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/flag_of_india" />
+
             <TextView
+                android:id="@+id/textViewFlag"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="2"
-                android:id="@+id/textViewFlag"
+                android:gravity="center_vertical"
                 android:text="India"
                 android:textAlignment="center"
-                android:textSize="20sp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat"
-                android:layout_margin="5dp"/>
+                android:textSize="20sp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

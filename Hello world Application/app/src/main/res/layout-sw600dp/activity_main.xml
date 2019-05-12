@@ -1,156 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"
-    app:layout_constraintHorizontal_chainStyle="spread">
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
 
-    <fragment android:name="com.example.user15.helloworldapplication.fragments.ExampleFragment"
+    <fragment
         android:id="@+id/exampleFragment"
+        android:name="com.example.user15.helloworldapplication.fragments.ExampleFragment"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity"
-        android:id="@+id/textView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="@string/activity_text" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40px"
-            android:layout_marginLeft="10px"
-            android:layout_marginRight="10px">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
             <Button
+                android:id="@+id/btnStandardLaunchActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Standard Launch"
-                android:textColor="#fff"
                 android:background="@drawable/button_gradient"
-                android:id="@+id/btnStandardLaunchActivity"/>
+                android:text="@string/standard_launch"
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnSingleTopActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Top"
-                android:textColor="#fff"
                 android:background="@drawable/button_gradient"
-                android:id="@+id/btnSingleTopActivity"/>
+                android:text="@string/single_top"
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnSingleTaskActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Task"
-                android:textColor="#fff"
                 android:background="@drawable/button_gradient"
-                android:id="@+id/btnSingleTaskActivity"/>
+                android:text="@string/single_task"
+                android:textColor="#fff" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40px"
-            android:layout_marginLeft="10px"
-            android:layout_marginRight="10px">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
             <Button
+                android:id="@+id/btnSingleInstanceActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
-                android:text="Single Instance"
-                android:textColor="#fff"
                 android:background="@drawable/button_gradient"
-                android:id="@+id/btnSingleInstanceActivity"/>
+                android:text="@string/single_instance"
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnIntentActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
+                android:background="@drawable/button_gradient"
                 android:text="Intents"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnIntentActivity"/>
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnFragmentActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_margin="10px"
+                android:background="@drawable/button_gradient"
                 android:text="Fragments"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnFragmentActivity"/>
+                android:textColor="#fff" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40px"
-            android:layout_marginLeft="10px"
-            android:layout_marginRight="10px">
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
             <Button
+                android:id="@+id/btnFormActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5px"
+                android:background="@drawable/button_gradient"
                 android:text="Submit Form"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnFormActivity"/>
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnRecyclerViewActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5px"
+                android:background="@drawable/button_gradient"
                 android:text="Recycler View"
-                android:textColor="#fff"
-                android:background="@drawable/button_gradient"
-                android:id="@+id/btnRecyclerViewActivity"/>
+                android:textColor="#fff" />
+
             <Button
+                android:id="@+id/btnWeatherActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:layout_margin="5px"
-                android:text="Get Weather Info"
-                android:textColor="#fff"
                 android:background="@drawable/button_gradient"
-                android:id="@+id/btnWeatherActivity"/>
+                android:text="Get Weather Info"
+                android:textColor="#fff" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10px"
-            android:layout_marginTop="40px"
-            android:layout_marginRight="10px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnWeatherVolleyActivity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="5px"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_gradient"
                 android:text="Get Weather Info Through Volley"
                 android:textColor="#fff" />
         </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

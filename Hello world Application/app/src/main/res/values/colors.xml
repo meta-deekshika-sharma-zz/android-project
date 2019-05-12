@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="btnStartColor">#d275f4</color>
     <color name="btnEndColor">#4f36f4</color>
+    <color name="blue_color">#00A7CE</color>
+    <color name="grey">#626263</color>
 </resources>

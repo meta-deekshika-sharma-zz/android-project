@@ -46,7 +46,7 @@ public class FormFragment extends Fragment {
     private String mParam2;
 
     private EditText nameEditText, emailEditText, numberEditText;
-    private Button dobBtn;
+    private EditText dobEditText;
     private RadioGroup radioGender;
     private RadioButton radioButton;
     private Spinner stateSpinner, citySpinner;
@@ -97,7 +97,7 @@ public class FormFragment extends Fragment {
         nameEditText = view.findViewById(R.id.nameEditText);
         emailEditText = view.findViewById(R.id.emailEditText);
         numberEditText = view.findViewById(R.id.numberEditText);
-        dobBtn = view.findViewById(R.id.dobBtn);
+        dobEditText = view.findViewById(R.id.dobEditText);
         radioGender = view.findViewById(R.id.radioGender);
         stateSpinner = view.findViewById(R.id.stateSpinner);
         citySpinner = view.findViewById(R.id.citySpinner);
@@ -198,14 +198,14 @@ public class FormFragment extends Fragment {
         });
         final Calendar calendar = Calendar.getInstance();
 
-        dobBtn.setOnClickListener(new View.OnClickListener() {
+        dobEditText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-                        dobBtn.setText("" + year + "/" + (month + 1 ) + "/" + dayOfMonth);
+                        dobEditText.setText("" + year + "/" + (month + 1 ) + "/" + dayOfMonth);
                     }
                 }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
@@ -218,7 +218,7 @@ public class FormFragment extends Fragment {
                 name = nameEditText.getText().toString();
                 email = emailEditText.getText().toString();
                 number = numberEditText.getText().toString();
-                dob = dobBtn.getText().toString();
+                dob = dobEditText.getText().toString();
                 int selectedRadioButton = radioGender.getCheckedRadioButtonId();
 
                 if ("".equals(name) || "".equals(email) || number.equals("") || dob.equals("Select date of birth") || selectedRadioButton == -1) {

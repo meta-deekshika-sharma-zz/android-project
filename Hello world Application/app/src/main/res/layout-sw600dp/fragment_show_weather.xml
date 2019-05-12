@@ -13,11 +13,12 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Temperature"
-            android:textSize="30sp"/>
+            android:text="@string/temperature"
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -26,15 +27,17 @@
 
             <TextView
                 android:id="@+id/tempTextView"
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textSize="30sp" />
 
             <TextView
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text=" &#176;C"
-                android:textSize="30sp"/>
+                android:text="@string/degree_cel"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -44,14 +47,16 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Pressure"
+            android:text="@string/pressure"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/pressureTextView"
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -64,14 +69,16 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Humidity"
+            android:text="@string/humidity"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/humidityTextView"
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -84,10 +91,11 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Maximum Temperature"
+            android:text="@string/max_temp"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -97,15 +105,17 @@
 
             <TextView
                 android:id="@+id/maxTempTextView"
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textSize="30sp" />
 
             <TextView
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text=" &#176;C"
-                android:textSize="30sp"/>
+                android:text="@string/degree_cel"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -115,10 +125,11 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Minimum Temperature"
+            android:text="@string/min_temp"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -128,15 +139,17 @@
 
             <TextView
                 android:id="@+id/minTempTextView"
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textSize="30sp" />
 
             <TextView
+                style="@style/activity_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="&#176;C"
-                android:textSize="30sp"/>
+                android:text="@string/degree_cel"
+                android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -146,14 +159,16 @@
         android:layout_weight="1">
 
         <TextView
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Wind Speed"
-            android:textSize="30sp"/>
+            android:text="@string/wind_speed"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/windSpeedTextView"
+            style="@style/activity_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

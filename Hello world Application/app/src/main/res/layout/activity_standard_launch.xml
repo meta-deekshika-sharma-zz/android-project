@@ -1,50 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.StandardLaunchActivity">
 
     <TextView
+        android:id="@+id/textView"
+        style="@style/activity_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Standard Launch Activity"
-        android:paddingTop="20px"
-        android:id="@+id/textView"/>
+        android:paddingTop="20dp"
+        android:text="@string/standard_launch" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20px"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:orientation="vertical">
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="100px"
-            android:text="Standard Launch"
-            android:id="@+id/btnStandardLaunchActivity"/>
+        android:orientation="vertical"
+        android:paddingTop="20dp">
 
         <Button
+            android:id="@+id/btnStandardLaunchActivity"
+            style="@style/button_style"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="100px"
-            android:text="Single Top"
-            android:id="@+id/btnSingleTopActivity"/>
+            android:layout_gravity="center"
+            android:background="@drawable/button_bg"
+            android:text="@string/standard_launch" />
 
         <Button
+            android:id="@+id/btnSingleTopActivity"
+            style="@style/button_style"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="100px"
-            android:text="Single Task"
-            android:id="@+id/btnSingleTaskActivity"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/single_top" />
 
         <Button
+            android:id="@+id/btnSingleTaskActivity"
+            style="@style/button_style"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="100px"
-            android:text="Single Instance"
-            android:id="@+id/btnSingleInstanceActivity"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/single_task" />
+
+        <Button
+            android:id="@+id/btnSingleInstanceActivity"
+            style="@style/button_style"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/single_instance" />
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
